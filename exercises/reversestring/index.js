@@ -5,12 +5,15 @@
 //   reverse('apple') === 'leppa'
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
-
 function reverse(str) {
-    debugger;
-  str.split().reduce((rev, char)=>char + rev , '');
-}
+    let reversed = '';
+     for(let character of str){
+         reversed = character + reversed;
+     }
+     return reversed;
+ }
 
+reverse("nishant")
 // function reverse(str) {
 //     return str
 //     .split('')
@@ -18,13 +21,10 @@ function reverse(str) {
 //     .join('');
 // }
 
-// function reverse(str) {
-//     let reversed = '';
-//      for(let character of str){
-  
-//          reversed = character + reversed;
-//      }
-//      return reversed;
-//  }
 
+
+
+function reverse(str) {
+    str.split().reduce((rev, char)=>char + rev , '');
+  }
 module.exports = reverse;
